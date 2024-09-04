@@ -1,0 +1,67 @@
+# Project: 学习管理系统
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ability.o We.o loginface.o abilityface.o seat.o class1.o library.o class2.o class3.o class4.o class5.o class6.o class7.o class8.o
+LINKOBJ  = ability.o We.o loginface.o abilityface.o seat.o class1.o library.o class2.o class3.o class4.o class5.o class6.o class7.o class8.o
+LIBS     = -L"D:/Download/dev/Dev-Cpp/MinGW64/lib" -L"D:/Download/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Download/dev/Dev-Cpp/MinGW64/include" -I"D:/Download/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Download/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Download/dev/Dev-Cpp/MinGW64/include" -I"D:/Download/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Download/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Download/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 界面.exe
+CXXFLAGS = $(CXXINCS) -std=gnu++11
+CFLAGS   = $(INCS) -std=gnu++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+ability.o: ability.c
+	$(CC) -c ability.c -o ability.o $(CFLAGS)
+
+We.o: We.c
+	$(CC) -c We.c -o We.o $(CFLAGS)
+
+loginface.o: loginface.c
+	$(CC) -c loginface.c -o loginface.o $(CFLAGS)
+
+abilityface.o: abilityface.c
+	$(CC) -c abilityface.c -o abilityface.o $(CFLAGS)
+
+seat.o: seat.c
+	$(CC) -c seat.c -o seat.o $(CFLAGS)
+
+class1.o: class1.c
+	$(CC) -c class1.c -o class1.o $(CFLAGS)
+
+library.o: library.c
+	$(CC) -c library.c -o library.o $(CFLAGS)
+
+class2.o: class2.c
+	$(CC) -c class2.c -o class2.o $(CFLAGS)
+
+class3.o: class3.c
+	$(CC) -c class3.c -o class3.o $(CFLAGS)
+
+class4.o: class4.c
+	$(CC) -c class4.c -o class4.o $(CFLAGS)
+
+class5.o: class5.c
+	$(CC) -c class5.c -o class5.o $(CFLAGS)
+
+class6.o: class6.c
+	$(CC) -c class6.c -o class6.o $(CFLAGS)
+
+class7.o: class7.c
+	$(CC) -c class7.c -o class7.o $(CFLAGS)
+
+class8.o: class8.c
+	$(CC) -c class8.c -o class8.o $(CFLAGS)

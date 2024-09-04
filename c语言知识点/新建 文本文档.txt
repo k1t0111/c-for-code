@@ -1,0 +1,12 @@
+结构体赋值 https://blog.csdn.net/ericbar/article/details/79567108
+
+
+
+随机数
+
+http://c.biancheng.net/view/2043.html
+
+
+c语言bool 类型
+
+包含此头文件 stdbool.h

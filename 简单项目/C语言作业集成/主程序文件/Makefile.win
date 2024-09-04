@@ -1,0 +1,223 @@
+# Project: 周俊帅C作业集成
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = homeworkmain.o ../ch4/ch4.o ../ch4/ch4_2.o ../ch3/ch3.o ../ch3/ch3_2.o ../ch3/ch3_3.o ../ch3/ch3_4.o ../ch5/ch5.o ../ch5/ch5_2.o ../ch5/ch5_3.o ../ch5/ch5_4.o ../ch5/ch5_5.o ../ch5/ch5_6.o ../ch5/ch5_7.o ../ch5/ch5_8.o ../ch5/ch5_9.o ../ch5/ch5_10.o ../ch5/ch5_11.o ../ch5/ch5_12.o ../ch5/ch5_13.o ../ch6/ch6.o ../ch6/ch6_2.o ../ch6/ch6_3.o ../ch6/ch6_4.o ../ch6/ch6_5.o ../ch6/ch6_6.o ../ch6/ch6_7.o ../ch6/ch6_8.o ../ch6/ch6_9.o ../ch6/ch6_10.o ../ch6/ch6_11.o ../ch6/ch6_12.o ../ch6/ch6_13.o ../ch6/ch6_14.o ../ch6/ch6_15.o ../ch6/ch6_16.o ../ch6/ch6_17.o ../ch6/ch6_18.o ../ch6/ch6_19.o ../ch6/ch6_20.o ../ch7/ch7.o ../ch7/ch7_2.o ../ch7/ch7_3.o ../ch7/ch7_4.o ../ch7/ch7_5.o ../ch7/ch7_6.o ../ch7/ch7_7.o ../ch7/ch7_8.o ../ch7/ch7_9.o ../ch7/ch7_10.o ../ch7/ch7_11.o ../ch7/ch7_12.o ../ch7/ch7_13.o ../ch7/ch7_14.o ../ch7/ch7_15.o ../ch7/ch7_16.o ../ch8/ch8.o ../ch8/ch8_2.o ../ch8/ch8_3.o ../ch8/ch8_4.o ../ch8/ch8_5.o ../ch8/ch8_6.o ../ch8/ch8_7.o ../ch8/ch8_8.o ../ch9/ch9.o ../ch9/ch9_2.o
+LINKOBJ  = homeworkmain.o ../ch4/ch4.o ../ch4/ch4_2.o ../ch3/ch3.o ../ch3/ch3_2.o ../ch3/ch3_3.o ../ch3/ch3_4.o ../ch5/ch5.o ../ch5/ch5_2.o ../ch5/ch5_3.o ../ch5/ch5_4.o ../ch5/ch5_5.o ../ch5/ch5_6.o ../ch5/ch5_7.o ../ch5/ch5_8.o ../ch5/ch5_9.o ../ch5/ch5_10.o ../ch5/ch5_11.o ../ch5/ch5_12.o ../ch5/ch5_13.o ../ch6/ch6.o ../ch6/ch6_2.o ../ch6/ch6_3.o ../ch6/ch6_4.o ../ch6/ch6_5.o ../ch6/ch6_6.o ../ch6/ch6_7.o ../ch6/ch6_8.o ../ch6/ch6_9.o ../ch6/ch6_10.o ../ch6/ch6_11.o ../ch6/ch6_12.o ../ch6/ch6_13.o ../ch6/ch6_14.o ../ch6/ch6_15.o ../ch6/ch6_16.o ../ch6/ch6_17.o ../ch6/ch6_18.o ../ch6/ch6_19.o ../ch6/ch6_20.o ../ch7/ch7.o ../ch7/ch7_2.o ../ch7/ch7_3.o ../ch7/ch7_4.o ../ch7/ch7_5.o ../ch7/ch7_6.o ../ch7/ch7_7.o ../ch7/ch7_8.o ../ch7/ch7_9.o ../ch7/ch7_10.o ../ch7/ch7_11.o ../ch7/ch7_12.o ../ch7/ch7_13.o ../ch7/ch7_14.o ../ch7/ch7_15.o ../ch7/ch7_16.o ../ch8/ch8.o ../ch8/ch8_2.o ../ch8/ch8_3.o ../ch8/ch8_4.o ../ch8/ch8_5.o ../ch8/ch8_6.o ../ch8/ch8_7.o ../ch8/ch8_8.o ../ch9/ch9.o ../ch9/ch9_2.o
+LIBS     = -L"D:/Download/dev/Dev-Cpp/MinGW64/lib" -L"D:/Download/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Download/dev/Dev-Cpp/MinGW64/include" -I"D:/Download/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Download/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Download/dev/Dev-Cpp/MinGW64/include" -I"D:/Download/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Download/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Download/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 周俊帅C作业集成.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+homeworkmain.o: homeworkmain.c
+	$(CC) -c homeworkmain.c -o homeworkmain.o $(CFLAGS)
+
+../ch4/ch4.o: ../ch4/ch4.c
+	$(CC) -c ../ch4/ch4.c -o ../ch4/ch4.o $(CFLAGS)
+
+../ch4/ch4_2.o: ../ch4/ch4_2.c
+	$(CC) -c ../ch4/ch4_2.c -o ../ch4/ch4_2.o $(CFLAGS)
+
+../ch3/ch3.o: ../ch3/ch3.c
+	$(CC) -c ../ch3/ch3.c -o ../ch3/ch3.o $(CFLAGS)
+
+../ch3/ch3_2.o: ../ch3/ch3_2.c
+	$(CC) -c ../ch3/ch3_2.c -o ../ch3/ch3_2.o $(CFLAGS)
+
+../ch3/ch3_3.o: ../ch3/ch3_3.c
+	$(CC) -c ../ch3/ch3_3.c -o ../ch3/ch3_3.o $(CFLAGS)
+
+../ch3/ch3_4.o: ../ch3/ch3_4.c
+	$(CC) -c ../ch3/ch3_4.c -o ../ch3/ch3_4.o $(CFLAGS)
+
+../ch5/ch5.o: ../ch5/ch5.c
+	$(CC) -c ../ch5/ch5.c -o ../ch5/ch5.o $(CFLAGS)
+
+../ch5/ch5_2.o: ../ch5/ch5_2.c
+	$(CC) -c ../ch5/ch5_2.c -o ../ch5/ch5_2.o $(CFLAGS)
+
+../ch5/ch5_3.o: ../ch5/ch5_3.c
+	$(CC) -c ../ch5/ch5_3.c -o ../ch5/ch5_3.o $(CFLAGS)
+
+../ch5/ch5_4.o: ../ch5/ch5_4.c
+	$(CC) -c ../ch5/ch5_4.c -o ../ch5/ch5_4.o $(CFLAGS)
+
+../ch5/ch5_5.o: ../ch5/ch5_5.c
+	$(CC) -c ../ch5/ch5_5.c -o ../ch5/ch5_5.o $(CFLAGS)
+
+../ch5/ch5_6.o: ../ch5/ch5_6.c
+	$(CC) -c ../ch5/ch5_6.c -o ../ch5/ch5_6.o $(CFLAGS)
+
+../ch5/ch5_7.o: ../ch5/ch5_7.c
+	$(CC) -c ../ch5/ch5_7.c -o ../ch5/ch5_7.o $(CFLAGS)
+
+../ch5/ch5_8.o: ../ch5/ch5_8.c
+	$(CC) -c ../ch5/ch5_8.c -o ../ch5/ch5_8.o $(CFLAGS)
+
+../ch5/ch5_9.o: ../ch5/ch5_9.c
+	$(CC) -c ../ch5/ch5_9.c -o ../ch5/ch5_9.o $(CFLAGS)
+
+../ch5/ch5_10.o: ../ch5/ch5_10.c
+	$(CC) -c ../ch5/ch5_10.c -o ../ch5/ch5_10.o $(CFLAGS)
+
+../ch5/ch5_11.o: ../ch5/ch5_11.c
+	$(CC) -c ../ch5/ch5_11.c -o ../ch5/ch5_11.o $(CFLAGS)
+
+../ch5/ch5_12.o: ../ch5/ch5_12.c
+	$(CC) -c ../ch5/ch5_12.c -o ../ch5/ch5_12.o $(CFLAGS)
+
+../ch5/ch5_13.o: ../ch5/ch5_13.c
+	$(CC) -c ../ch5/ch5_13.c -o ../ch5/ch5_13.o $(CFLAGS)
+
+../ch6/ch6.o: ../ch6/ch6.c
+	$(CC) -c ../ch6/ch6.c -o ../ch6/ch6.o $(CFLAGS)
+
+../ch6/ch6_2.o: ../ch6/ch6_2.c
+	$(CC) -c ../ch6/ch6_2.c -o ../ch6/ch6_2.o $(CFLAGS)
+
+../ch6/ch6_3.o: ../ch6/ch6_3.c
+	$(CC) -c ../ch6/ch6_3.c -o ../ch6/ch6_3.o $(CFLAGS)
+
+../ch6/ch6_4.o: ../ch6/ch6_4.c
+	$(CC) -c ../ch6/ch6_4.c -o ../ch6/ch6_4.o $(CFLAGS)
+
+../ch6/ch6_5.o: ../ch6/ch6_5.c
+	$(CC) -c ../ch6/ch6_5.c -o ../ch6/ch6_5.o $(CFLAGS)
+
+../ch6/ch6_6.o: ../ch6/ch6_6.c
+	$(CC) -c ../ch6/ch6_6.c -o ../ch6/ch6_6.o $(CFLAGS)
+
+../ch6/ch6_7.o: ../ch6/ch6_7.c
+	$(CC) -c ../ch6/ch6_7.c -o ../ch6/ch6_7.o $(CFLAGS)
+
+../ch6/ch6_8.o: ../ch6/ch6_8.c
+	$(CC) -c ../ch6/ch6_8.c -o ../ch6/ch6_8.o $(CFLAGS)
+
+../ch6/ch6_9.o: ../ch6/ch6_9.c
+	$(CC) -c ../ch6/ch6_9.c -o ../ch6/ch6_9.o $(CFLAGS)
+
+../ch6/ch6_10.o: ../ch6/ch6_10.c
+	$(CC) -c ../ch6/ch6_10.c -o ../ch6/ch6_10.o $(CFLAGS)
+
+../ch6/ch6_11.o: ../ch6/ch6_11.c
+	$(CC) -c ../ch6/ch6_11.c -o ../ch6/ch6_11.o $(CFLAGS)
+
+../ch6/ch6_12.o: ../ch6/ch6_12.c
+	$(CC) -c ../ch6/ch6_12.c -o ../ch6/ch6_12.o $(CFLAGS)
+
+../ch6/ch6_13.o: ../ch6/ch6_13.c
+	$(CC) -c ../ch6/ch6_13.c -o ../ch6/ch6_13.o $(CFLAGS)
+
+../ch6/ch6_14.o: ../ch6/ch6_14.c
+	$(CC) -c ../ch6/ch6_14.c -o ../ch6/ch6_14.o $(CFLAGS)
+
+../ch6/ch6_15.o: ../ch6/ch6_15.c
+	$(CC) -c ../ch6/ch6_15.c -o ../ch6/ch6_15.o $(CFLAGS)
+
+../ch6/ch6_16.o: ../ch6/ch6_16.c
+	$(CC) -c ../ch6/ch6_16.c -o ../ch6/ch6_16.o $(CFLAGS)
+
+../ch6/ch6_17.o: ../ch6/ch6_17.c
+	$(CC) -c ../ch6/ch6_17.c -o ../ch6/ch6_17.o $(CFLAGS)
+
+../ch6/ch6_18.o: ../ch6/ch6_18.c
+	$(CC) -c ../ch6/ch6_18.c -o ../ch6/ch6_18.o $(CFLAGS)
+
+../ch6/ch6_19.o: ../ch6/ch6_19.c
+	$(CC) -c ../ch6/ch6_19.c -o ../ch6/ch6_19.o $(CFLAGS)
+
+../ch6/ch6_20.o: ../ch6/ch6_20.c
+	$(CC) -c ../ch6/ch6_20.c -o ../ch6/ch6_20.o $(CFLAGS)
+
+../ch7/ch7.o: ../ch7/ch7.c
+	$(CC) -c ../ch7/ch7.c -o ../ch7/ch7.o $(CFLAGS)
+
+../ch7/ch7_2.o: ../ch7/ch7_2.c
+	$(CC) -c ../ch7/ch7_2.c -o ../ch7/ch7_2.o $(CFLAGS)
+
+../ch7/ch7_3.o: ../ch7/ch7_3.c
+	$(CC) -c ../ch7/ch7_3.c -o ../ch7/ch7_3.o $(CFLAGS)
+
+../ch7/ch7_4.o: ../ch7/ch7_4.c
+	$(CC) -c ../ch7/ch7_4.c -o ../ch7/ch7_4.o $(CFLAGS)
+
+../ch7/ch7_5.o: ../ch7/ch7_5.c
+	$(CC) -c ../ch7/ch7_5.c -o ../ch7/ch7_5.o $(CFLAGS)
+
+../ch7/ch7_6.o: ../ch7/ch7_6.c
+	$(CC) -c ../ch7/ch7_6.c -o ../ch7/ch7_6.o $(CFLAGS)
+
+../ch7/ch7_7.o: ../ch7/ch7_7.c
+	$(CC) -c ../ch7/ch7_7.c -o ../ch7/ch7_7.o $(CFLAGS)
+
+../ch7/ch7_8.o: ../ch7/ch7_8.c
+	$(CC) -c ../ch7/ch7_8.c -o ../ch7/ch7_8.o $(CFLAGS)
+
+../ch7/ch7_9.o: ../ch7/ch7_9.c
+	$(CC) -c ../ch7/ch7_9.c -o ../ch7/ch7_9.o $(CFLAGS)
+
+../ch7/ch7_10.o: ../ch7/ch7_10.c
+	$(CC) -c ../ch7/ch7_10.c -o ../ch7/ch7_10.o $(CFLAGS)
+
+../ch7/ch7_11.o: ../ch7/ch7_11.c
+	$(CC) -c ../ch7/ch7_11.c -o ../ch7/ch7_11.o $(CFLAGS)
+
+../ch7/ch7_12.o: ../ch7/ch7_12.c
+	$(CC) -c ../ch7/ch7_12.c -o ../ch7/ch7_12.o $(CFLAGS)
+
+../ch7/ch7_13.o: ../ch7/ch7_13.c
+	$(CC) -c ../ch7/ch7_13.c -o ../ch7/ch7_13.o $(CFLAGS)
+
+../ch7/ch7_14.o: ../ch7/ch7_14.c
+	$(CC) -c ../ch7/ch7_14.c -o ../ch7/ch7_14.o $(CFLAGS)
+
+../ch7/ch7_15.o: ../ch7/ch7_15.c
+	$(CC) -c ../ch7/ch7_15.c -o ../ch7/ch7_15.o $(CFLAGS)
+
+../ch7/ch7_16.o: ../ch7/ch7_16.c
+	$(CC) -c ../ch7/ch7_16.c -o ../ch7/ch7_16.o $(CFLAGS)
+
+../ch8/ch8.o: ../ch8/ch8.c
+	$(CC) -c ../ch8/ch8.c -o ../ch8/ch8.o $(CFLAGS)
+
+../ch8/ch8_2.o: ../ch8/ch8_2.c
+	$(CC) -c ../ch8/ch8_2.c -o ../ch8/ch8_2.o $(CFLAGS)
+
+../ch8/ch8_3.o: ../ch8/ch8_3.c
+	$(CC) -c ../ch8/ch8_3.c -o ../ch8/ch8_3.o $(CFLAGS)
+
+../ch8/ch8_4.o: ../ch8/ch8_4.c
+	$(CC) -c ../ch8/ch8_4.c -o ../ch8/ch8_4.o $(CFLAGS)
+
+../ch8/ch8_5.o: ../ch8/ch8_5.c
+	$(CC) -c ../ch8/ch8_5.c -o ../ch8/ch8_5.o $(CFLAGS)
+
+../ch8/ch8_6.o: ../ch8/ch8_6.c
+	$(CC) -c ../ch8/ch8_6.c -o ../ch8/ch8_6.o $(CFLAGS)
+
+../ch8/ch8_7.o: ../ch8/ch8_7.c
+	$(CC) -c ../ch8/ch8_7.c -o ../ch8/ch8_7.o $(CFLAGS)
+
+../ch8/ch8_8.o: ../ch8/ch8_8.c
+	$(CC) -c ../ch8/ch8_8.c -o ../ch8/ch8_8.o $(CFLAGS)
+
+../ch9/ch9.o: ../ch9/ch9.c
+	$(CC) -c ../ch9/ch9.c -o ../ch9/ch9.o $(CFLAGS)
+
+../ch9/ch9_2.o: ../ch9/ch9_2.c
+	$(CC) -c ../ch9/ch9_2.c -o ../ch9/ch9_2.o $(CFLAGS)
